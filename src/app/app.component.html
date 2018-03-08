@@ -1,0 +1,105 @@
+<!-- <data-table-demo-1></data-table-demo-1 -->
+<!--<data-table-demo-1-remote></data-table-demo-1-remote>-->
+<!-- <data-table-demo-2></data-table-demo-2> -->
+<!-- <data-table-demo-3></data-table-demo-3> -->
+<!-- This markup is just like the first except the content is different -->
+<div class="light">
+  <div id="app-container">
+    <nav id="navigation" [ngClass]="menuExpanded ? 'expanded' : 'collapse'">
+      <div class="logo">
+        <img src="assets/img/echo-logo.png" alt="logo" />
+        <i (click)="menuToggle();" class="fa fa-align-justify"></i>
+      </div>
+      <div class="navigation-menu">
+        <ul *ngFor="let menu of menuList">
+          <li (click)="menu.hidden = !menu.hidden;linkMenuExpand();" [ngClass]="menu.hidden && menu.subMenu.length !== 0 ? 'active' : ''">
+            <div class="menu-icon">
+              <img src="{{menu.icon}}" alt="icon" />
+            </div>
+            <div class="menu-name">
+              {{menu.name}}
+            </div>
+            <div class="menu-caret" [hidden]="menu.subMenu.length == 0">
+              <i [ngClass]="menu.hidden ? 'fa fa-caret-up' : 'fa fa-caret-down'"></i>
+            </div>
+          </li>
+          <ul [hidden]="!menu.hidden" [ngClass]="menu.hidden ? 'fadein' : 'fadeout'">
+            <li routerLink="submenu.link" *ngFor="let submenu of menu.subMenu" [ngClass]="href == submenu.link ? 'currentPage' : ''">
+              <div class="menu-icon">
+                <img src="{{submenu.icon}}" alt="icon" />
+              </div>
+              <div class="menu-name">
+                {{submenu.name}}
+              </div>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </nav>
+    <section id="main-content">
+      <header id="header">
+        <div class="header-content">
+          <div class="notification">
+            <ul>
+              <li>
+                <i class="far fa-bell"></i>
+                <span class="count">12</span>
+              </li>
+              <li>
+                <i class="far fa-envelope"></i>
+                <span class="count">03</span>
+              </li>
+            </ul>
+          </div>
+          <div class="profile">Welcome, {{userName}}
+            <img src="{{userImg}}" alt="profile" />
+          </div>
+        </div>
+        <!-- <echo-header [show$]="isLoggedIn$"></echo-header>
+      <breadcrumb [show$]="isLoggedIn$"></breadcrumb> -->
+      </header>
+      <section id="scrolling-content">
+        Navigation
+        <!-- <ng-content></ng-content> -->
+      </section>
+    </section>
+  </div>
+  <footer id="footer">
+    &copy; 2018 Copyright ECHO Health, Inc. All Rights Reserved.
+  </footer>
+</div>
+<!-- <div class="app light">
+  <nav>
+    
+  </nav>
+  <section class="main-content">
+    <header></header>
+    <div class="scrolling-content">
+      <data-grid id="grid-layout" [items]="gridData" [collapse]="false" [displayCount]="10" [columnCount]="5" [fixedFront]="1"
+        [fixedBack]="true">
+        <data-grid-column [property]="'providerTIN'" [title]="'Provider TIN'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'providerName'" [title]="'Provider Name'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'setupType'" [title]="'Setup Type'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'TPACH'" [title]="'TPACH'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'TPA'" [title]="'TPA'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'providerTIN'" [title]="'Provider TIN'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'providerName'" [title]="'Provider Name'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'providerTIN'" [title]="'Provider TIN'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'providerName'" [title]="'Provider Name'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'setupType'" [title]="'Setup Type'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'TPACH'" [title]="'TPACH'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'TPA'" [title]="'TPA'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'providerTIN'" [title]="'Provider TIN'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'providerName'" [title]="'Provider Name'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'setupType'" [title]="'Setup Type'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'TPACH'" [title]="'TPACH'" [sortable]="true" [visible]="true"></data-grid-column>
+        <data-grid-column [property]="'TPA'" [title]="'TPA'" [sortable]="true" [visible]="true"></data-grid-column>
+      </data-grid>
+    </div>
+    <!-- <form-component label="Username" input="text" required="true" modelName="email" value="" validation="email" view="horizontal"></form-component>
+      <form-component label="Password" input="password" required="true" modelName="password" validation="confirmPassword" view="horizontal"></form-component>
+      <form-component label="Confirm Password" input="password" required="true" modelName="password2" validation="confirmPassword"
+        view="vertical"></form-component> -->
+<!--</section>
+</div>
+<footer>asdasdf</footer> -->

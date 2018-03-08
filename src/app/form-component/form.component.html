@@ -1,0 +1,13 @@
+<div *ngIf="input == 'text'">
+    <div [ngClass]="view == 'horizontal' ? 'form-group form-horizontal' : 'horizontal'">
+        <label>{{label}}</label>
+        <input type="text" value="" [(ngModel)]="modelName" value="value" class="form-control" required="required ? 'required' : ''"
+        />
+    </div>
+</div>
+<div *ngIf="input == 'password'">
+    <div class="form-group">
+        <label>{{label}}</label>
+        <input type="password" value="" [(ngModel)]="modelName" value="value" class="form-control" />
+    </div>
+</div>

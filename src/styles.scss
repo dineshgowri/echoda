@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/_variables';
+@import 'assets/scss/_functions';
+@import 'assets/scss/_mixins';
+@import 'assets/scss/fontawesome-all.scss';
+@import 'assets/scss/_themes';
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  -ms-overflow-style: none;
+}

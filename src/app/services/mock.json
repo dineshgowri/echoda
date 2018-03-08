@@ -1,0 +1,212 @@
+{
+  "providers": [
+    {
+      "id": "1",
+      "providerTIN": "987654321",
+      "providerName": "St. John's Physicians",
+      "setupType": "835",
+      "TPACH": "Zirmed",
+      "TPA": "AmeraPlan, Benmark"
+    },
+    {
+      "id": "2",
+      "providerTIN": "987654322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "OSU",
+      "TPA": "Coresource, Benmark"
+    },
+    {
+      "id": "3",
+      "providerTIN": "987654323",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Meritain",
+      "TPA": "AmeraPlan"
+    },
+    {
+      "id": "4",
+      "providerTIN": "987654324",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Zirmed",
+      "TPA": "AmeraPlan, Benmark"
+    },
+    {
+      "id": "5",
+      "providerTIN": "987654325",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "OSU",
+      "TPA": "Coresource, Benmark"
+    },
+    {
+      "id": "6",
+      "providerTIN": "987655222",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Meritain",
+      "TPA": "AmeraPlan"
+    },
+    {
+      "id": "7",
+      "providerTIN": "983454322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Zirmed",
+      "TPA": "AmeraPlan, Benmark"
+    },
+    {
+      "id": "8",
+      "providerTIN": "987674222",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "OSU",
+      "TPA": "Coresource, Benmark"
+    },
+    {
+      "id": "9",
+      "providerTIN": "987437322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Zirmed",
+      "TPA": "AmeraPlan, Benmark"
+    },
+    {
+      "id": "10",
+      "providerTIN": "987102322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Meritain",
+      "TPA": "AmeraPlan"
+    },
+    {
+      "id": "11",
+      "providerTIN": "987654102",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "OSU",
+      "TPA": "Coresource, Benmark"
+    },
+    {
+      "id": "12",
+      "providerTIN": "293654322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Zirmed",
+      "TPA": "AmeraPlan, Benmark"
+    },
+    {
+      "id": "13",
+      "providerTIN": "103654322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "OSU",
+      "TPA": "Coresource, Benmark"
+    },
+    {
+      "id": "14",
+      "providerTIN": "910254322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Meritain",
+      "TPA": "AmeraPlan"
+    },
+    {
+      "id": "15",
+      "providerTIN": "981124322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Zirmed",
+      "TPA": "AmeraPlan, Benmark"
+    },
+    {
+      "id": "16",
+      "providerTIN": "987651272",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "OSU",
+      "TPA": "Coresource, Benmark"
+    },
+    {
+      "id": "17",
+      "providerTIN": "987654311",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Meritain",
+      "TPA": "AmeraPlan"
+    },
+    {
+      "id": "18",
+      "providerTIN": "987120922",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Zirmed",
+      "TPA": "AmeraPlan, Benmark"
+    },
+    {
+      "id": "19",
+      "providerTIN": "981029322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Meritain",
+      "TPA": "AmeraPlan"
+    },
+    {
+      "id": "20",
+      "providerTIN": "987674929",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "OSU",
+      "TPA": "Coresource, Benmark"
+    },
+    {
+      "id": "21",
+      "providerTIN": "989876322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Zirmed",
+      "TPA": "AmeraPlan, Benmark"
+    },
+    {
+      "id": "22",
+      "providerTIN": "987619282",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Meritain",
+      "TPA": "AmeraPlan"
+    },
+    {
+      "id": "23",
+      "providerTIN": "982254322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "OSU",
+      "TPA": "Coresource, Benmark"
+    },
+    {
+      "id": "24",
+      "providerTIN": "786554322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Zirmed",
+      "TPA": "AmeraPlan, Benmark"
+    },
+    {
+      "id": "25",
+      "providerTIN": "678254322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "OSU",
+      "TPA": "Coresource, Benmark"
+    },
+    {
+      "id": "26",
+      "providerTIN": "657254322",
+      "providerName": "Bradley Dunn",
+      "setupType": "835 Setup",
+      "TPACH": "Zirmed",
+      "TPA": "AmeraPlan, Benmark"
+    }
+  ]
+}

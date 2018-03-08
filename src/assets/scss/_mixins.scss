@@ -1,0 +1,99 @@
+//Border mixin
+@mixin border-mixin($thinkness, $style, $color) {
+  border: $thinkness $style $color;
+}
+
+@mixin border-top-mixin($thinkness, $style, $color) {
+  border-top: $thinkness $style $color;
+}
+
+@mixin border-right-mixin($thinkness, $style, $color) {
+  border-right: $thinkness $style $color;
+}
+
+@mixin border-bottom-mixin($thinkness, $style, $color) {
+  border-bottom: $thinkness $style $color;
+}
+
+@mixin border-left-mixin($thinkness, $style, $color) {
+  border-left: $thinkness $style $color;
+}
+
+//Border radius mixin
+@mixin border-radius-mixin($size) {
+  border-radius: $size;
+}
+
+@mixin border-radius-top-left-mixin($size) {
+  border-top-left-radius: $size;
+}
+
+@mixin border-radius-top-right-mixin($size) {
+  border-top-right-radius: $size;
+}
+
+@mixin border-radius-bottom-left-mixin($size) {
+  border-bottom-left-radius: $size;
+}
+
+@mixin border-radius-bottom-right-mixin($size) {
+  border-bottom-right-radius: $size;
+}
+
+//Padding Mixin
+@mixin padding-base-mixin($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin padding-common-mixin($number) {
+  padding: $number;
+}
+
+@mixin padding-top-mixin($top) {
+  padding-top: $top;
+}
+
+@mixin padding-right-mixin($right) {
+  padding-right: $right;
+}
+
+@mixin padding-bottom-mixin($bottom) {
+  padding-bottom: $bottom;
+}
+
+@mixin padding-left-mixin($left) {
+  padding-left: $left;
+}
+
+//Margin Mixin
+@mixin margin-base-mixin($top, $right, $bottom, $left) {
+  margin: $top $right $bottom $left;
+}
+
+@mixin margin-common-mixin($number) {
+  margin: $number;
+}
+
+@mixin margin-top-mixin($top) {
+  margin-top: $top;
+}
+
+@mixin margin-right-mixin($right) {
+  margin-right: $right;
+}
+
+@mixin margin-bottom-mixin($bottom) {
+  margin-bottom: $bottom;
+}
+
+@mixin margin-left-mixin($left) {
+  margin-left: $left;
+}
+
+@mixin pull-direction($direction) {
+  float: $direction;
+}
+
+@mixin make-col($columns) {
+  width: 100% / $columns;
+}

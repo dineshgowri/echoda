@@ -1,0 +1,219 @@
+$themes: (
+  light:
+    (
+      'primary': #fff,
+      'secondary': #725bf7,
+      'secondary-opacity': rgba(114, 91, 247, 0.1),
+      'font-primary': #9ca0ab,
+      'font-secondary': #40424d,
+      'header': #fff,
+      'footer': #f9fbfc,
+      'background': #eff3f6,
+      'notification': #ff0453,
+      'notification-bg': #ffffff
+    ),
+  dark: ('primary': red, 'secondary': blue)
+);
+
+@mixin theme($name, $color) {
+  .#{$name} {
+    #app-container {
+      height: calc(100vh - 45px);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: auto;
+      nav#navigation {
+        order: 0;
+        overflow-y: auto;
+        display: flex;
+        height: calc(100vh - 45px);
+        flex-direction: column;
+        box-shadow: 1px 0 1px 0 rgba(156, 160, 171, 0.4);
+        z-index: 1;
+        &.expanded {
+          flex: 0 0 300px;
+        }
+        &.collapse {
+          flex: 0 0 80px;
+          .logo {
+            img {
+              visibility: hidden;
+            }
+            i {
+              right: 30px;
+            }
+          }
+        }
+        .logo {
+          position: relative;
+          height: 75px;
+          img {
+            position: absolute;
+            transform: translate(50%, 50%);
+          }
+          i {
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 24px;
+            font-size: 24px;
+            color: map-get($color, 'secondary');
+          }
+        }
+        .navigation-menu {
+          @include padding-base-mixin(28px, 0, 28px, 0);
+          height: auto;
+          overflow-y: scroll;
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+              @include padding-base-mixin(0, 28px, 0, 28px);
+              cursor: pointer;
+              height: auto;
+              @include padding-bottom-mixin(13px);
+              @include padding-top-mixin(14px);
+              flex-direction: row;
+              justify-content: left;
+              display: flex;
+              align-items: center;
+              color: map-get($color, 'font-primary');
+              &.active {
+                font-weight: bold;
+                color: map-get($color, 'font-secondary');
+              }
+              .menu-icon {
+                align-self: flex-start;
+              }
+              .menu-name {
+                font-size: $font-18;
+                @include padding-left-mixin(26px);
+              }
+              .menu-caret {
+                margin-left: auto;
+              }
+            }
+            ul {
+              li {
+                @include border-left-mixin(5px, solid, transparent);
+              }
+            }
+            ul.fadein {
+              li.currentPage {
+                color: map-get($color, 'secondary');
+                @include border-left-mixin(
+                  5px,
+                  solid,
+                  map-get($color, 'secondary')
+                );
+                color: map-get($color, 'secondary');
+                background-color: map-get($color, 'secondary-opacity');
+                font-weight: bold;
+              }
+            }
+            .fadein,
+            .fadeout {
+              opacity: 0;
+              -moz-transition: opacity 2s ease-in-out;
+              -o-transition: opacity 2s ease-in-out;
+              -webkit-transition: opacity 2s ease-in-out;
+              transition: opacity 2s ease-in-out;
+            }
+            .fadein {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      section#main-content {
+        flex: 1;
+        order: 1;
+        overflow: auto;
+        width: 768px;
+        display: flex;
+        flex-direction: column;
+        background: map-get($color, 'background');
+        header#header {
+          background: map-get($color, 'header');
+          z-index: 0;
+          flex: 0 75px;
+          order: 1;
+          height: 75px;
+          box-shadow: 0 1px 12px 0 rgba(156, 160, 171, 0.2);
+          .header-content {
+            @include pull-direction(right);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            @include padding-common-mixin(10px);
+            .notification {
+              @include margin-right-mixin(15px);
+              ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                  @include pull-direction(left);
+                  position: relative;
+                  width: 40px;
+                  i {
+                    font-size: 23px;
+                    color: map-get($color, 'font-primary');
+                    font-weight: normal;
+                  }
+                  span {
+                    background: map-get($color, 'notification');
+                    @include border-radius-mixin(50%);
+                    color: map-get($color, 'notification-bg');
+                    position: absolute;
+                    top: -8px;
+                    right: 8px;
+                    font-size: 11px;
+                    @include padding-common-mixin(5px);
+                  }
+                }
+              }
+            }
+            .profile {
+              display: flex;
+              align-items: center;
+              color: map-get($color, 'font-primary');
+              font-size: $font-17;
+              img {
+                @include margin-left-mixin(10px);
+              }
+            }
+          }
+        }
+        section#scrolling-content {
+          height: calc(100vh - 120px);
+          overflow-y: scroll;
+          flex: 1;
+          order: 2;
+        }
+      }
+    }
+    footer#footer {
+      height: 44px;
+      flex-shrink: 0;
+      text-align: center;
+      background-color: map-get($color, 'footer');
+      box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.18);
+      color: map-get($color, 'font-primary');
+      font-size: $font-14;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+  }
+}
+// Including themes
+// By looping through the $themes map
+@each $key, $value in $themes {
+  @include theme($key, $value);
+}
